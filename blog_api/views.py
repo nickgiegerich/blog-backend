@@ -15,7 +15,7 @@ class PostUserWritePermission(BasePermission):
         return obj.author == request.user
 
 class PostList(generics.ListCreateAPIView):
-    permission_classes = [DjangoModelPermissions]
+    # permission_classes = [DjangoModelPermissions]
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
